@@ -55,9 +55,9 @@ public class UserController {
 		User createdUser = userService.createUser(user);
 		if (null != createdUser) {
 			LOG.info("new user with id " + createdUser.getId() + " is created successfully");
-			return new ResponseEntity<String>("User created succefully", HttpStatus.NO_CONTENT);
+			return new ResponseEntity<String>("User created succefully", HttpStatus.CREATED);
 		} else {
-			throw new UnexpectedException("Unexpected Error");
+			return  new ResponseEntity<>(null, null, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
 

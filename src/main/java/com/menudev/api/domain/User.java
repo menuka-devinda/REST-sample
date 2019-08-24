@@ -1,8 +1,6 @@
 package com.menudev.api.domain;
 
 /**
- * User class is following builder pattern to create the immutable objects
- * For 3 fields we can use constructor initialization too.
  * 
  * @author menuk
  *
