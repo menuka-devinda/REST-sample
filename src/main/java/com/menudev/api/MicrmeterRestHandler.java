@@ -21,6 +21,8 @@ public class MicrmeterRestHandler {
     public void handleMessage() {
         Counter counter = meterRegistry.counter("testCounter", "tagName", "value");
         counter.increment();
+        counter.increment();
+        counter.increment();
         System.out.println("counter \t" + counter.count());
 
     }
